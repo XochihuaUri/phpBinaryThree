@@ -1,4 +1,4 @@
-class Nodo {
+class Node {
     public $valor;
     public $izquierda;
     public $derecha;
@@ -84,3 +84,16 @@ class ArbolBinario {
 }
 
 
+$arbol = new ArbolBinario();
+
+$arbol->insertar(5);
+$arbol->insertar(3);
+$arbol->insertar(7);
+$arbol->insertar(1);
+$arbol->insertar(4);
+
+echo "Recorrido inorden (ascendente): ";
+$arbol->inorden(); // Salida: 1 3 4 5 7
+
+echo "\nRecorrido inorden (descendente): ";
+$arbol->inordenDescendente(); // Salida: 7 5 4 3 1
